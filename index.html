@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download - Diário Terapêutico 2026</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      width: 320px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: flex; /* Mudado para flex para centralizar melhor */
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 15px; /* Espaço entre os botões */
+    }
+
+    /* Estilo do Botão de Download */
+    .btn-download {
+      background: #fff;
+      color: #c33764;
+      animation: pulse 2s infinite;
+    }
+
+    /* Estilo do Botão do WhatsApp */
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .icon {
+      font-size: 1.3rem;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(255,255,255,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+    }
+
+    .circles span {
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      animation: float 20s linear infinite;
+      bottom: -150px;
+    }
+
+    .circles span:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-duration: 25s; }
+    .circles span:nth-child(2) { left: 10%; animation-duration: 12s; }
+    .circles span:nth-child(3) { left: 70%; width: 60px; height: 60px; animation-duration: 18s; }
+    .circles span:nth-child(4) { left: 40%; width: 100px; height: 100px; animation-duration: 30s; }
+    .circles span:nth-child(5) { left: 85%; animation-duration: 15s; }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-1000px); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Diário Terapêutico<br>2026</h1>
+    <p>Baixe seu material ou agende uma consulta diretamente comigo.</p>
+
+    <a 
+      class="btn btn-download"
+      href="download/Diario_Terapeutico_2026.pdf"
+      download="Diario_Terapeutico_2026.pdf"
+    >
+      <span class="icon">📥</span>
+      Baixar Diário
+    </a>
+
+    <a 
+      class="btn btn-whatsapp"
+      href="https://wa.me/5538991715994?text=Olá! Gostaria de agendar uma sessão de terapia."
+      target="_blank"
+    >
+      <span class="icon">💬</span>
+      Agendar Sessão
+    </a>
+  </div>
+
+  <div class="circles">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+</body>
+</html>
